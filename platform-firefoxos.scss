@@ -1,0 +1,23 @@
+.platform-firefoxos {
+  @import "theme-firefoxos.scss";
+
+  .device {
+    font-family: "Open Sans", sans-serif;
+    background-image: url("peak.png");
+
+    .device-content {
+      font-size: 18px;
+      line-height: 22px;
+      background-color: #f2f2f2;
+    }
+    .content {
+      top: 50px;
+    }
+    .popover {
+      @include transform(scale(1));
+    }
+  }
+  .bar ~ .content {
+    padding: 0;
+  }
+}
