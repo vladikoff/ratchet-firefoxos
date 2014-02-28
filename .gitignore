@@ -1,4 +1,6 @@
 node_modules/*
 !node_modules/ratchet
 node_modules/ratchet/docs/*.html
+node_modules/ratchet/docs/_layouts
+node_modules/ratchet/docs/_includes
 .sass-cache
