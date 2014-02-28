@@ -19,8 +19,28 @@
   <script src="node_modules/ratchet/docs/assets/js/docs.js"></script>
   <script src="node_modules/ratchet/docs/assets/js/fingerblast.js"></script>
 
-  <!-- Roboto -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,500' rel='stylesheet' type='text/css'>
+
+  <script>
+    $(function() {
+      $('.platform-switch').on('click', function () {
+        var components = $('.docs-components');
+        var platform   = $(this).attr('data-platform');
+
+        // Set platform
+        if (components.hasClass('platform-firefoxos')) {
+          components.removeClass('platform-firefoxos');
+          components.addClass(platform);
+        } else {
+          components.addClass(platform);
+        }
+
+        // Deal with active states
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+  </script>
 
 </head>
 <body ontouchstart="">
